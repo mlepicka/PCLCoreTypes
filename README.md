@@ -4,14 +4,17 @@ PCLCoreTypes - DisCODe Component Library
 Description
 -----------
 
-Fill this section with description of this library.
+DCL containing user-defined point clouds used by other DCLs.
 
 Dependencies
 ------------
 
-Put here any dependencies of this library (other DCLs, third party libraries etc)
+DCL depends on the following DCLs:
+- PCL (transformation to point clouds, types etc.)
 
 Maintainer
 ----------
 
-Provide any information about yourself
+- [Tomasz Kornuta](https://github.com/tkornuta)
+
+- [Michał Laszkowski](https://github.com/mlaszko)

@@ -12,8 +12,10 @@ include_directories(SYSTEM ${Boost_INCLUDE_DIR})
 
 # Find another necessary libraries
 
-# # OpenCV library
-# FIND_PACKAGE( OpenCV REQUIRED )
+FIND_PACKAGE(PCL 1.7.1 REQUIRED)
+include_directories(${PCL_INCLUDE_DIRS})
+link_directories(${PCL_LIBRARY_DIRS})
+add_definitions(${PCL_DEFINITIONS})
 
 # Find another DCLs our one depends on
 # Use macro: DISCODE_FIND_DCL(<DCL_NAME>)
@@ -22,10 +24,10 @@ include_directories(SYSTEM ${Boost_INCLUDE_DIR})
 # Add source directories
 # ##############################################################################
 
-# CvBlobs components
-ADD_SUBDIRECTORY(Components)
+# PCL Core Types components
+# ADD_SUBDIRECTORY(Components)
 
-# CvBlobs types
+# PCL Core Types types
 ADD_SUBDIRECTORY(Types)
 
 # Prepare config file to use from another DCLs
