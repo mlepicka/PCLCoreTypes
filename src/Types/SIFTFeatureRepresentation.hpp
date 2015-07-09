@@ -3,7 +3,11 @@
 
 #define PCL_NO_PRECOMPILE
 #include <pcl/point_types.h>
+#include <pcl/point_representation.h>
+
 #include <Types/PointXYZSIFT.hpp>
+
+//namespace Types {
 
 
 /*
@@ -31,5 +35,7 @@ class SIFTFeatureRepresentation: public pcl::DefaultFeatureRepresentation <Point
 	}
 };
 
+
+//}//: namespace Types
 
 #endif /* SIFTFeatureRepresentation_HPP_ */
