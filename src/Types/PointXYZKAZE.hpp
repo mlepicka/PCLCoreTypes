@@ -14,11 +14,12 @@
 #include "pcl/impl/instantiate.hpp"
 
 #include <boost/preprocessor.hpp>
+#define DESC_SIZE 64
 
 struct PointXYZKAZE
 {
   PCL_ADD_POINT4D;                  // preferred way of adding a XYZ+padding
-  float descriptor[128];
+  float descriptor[DESC_SIZE];
   int multiplicity; 
   int pointId;
   bool extended;
@@ -29,7 +30,7 @@ POINT_CLOUD_REGISTER_POINT_STRUCT (PointXYZKAZE           // here we assume a XY
                                    ,(float, x, x)
                                    (float, y, y)
                                    (float, z, z)
-                                   (float[128], descriptor, descriptor)
+                                   (float[DESC_SIZE], descriptor, descriptor)
                                    (int, multiplicity, multiplicity)
                                    (int, pointId, pointId)
 )

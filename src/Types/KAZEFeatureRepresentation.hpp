@@ -18,10 +18,10 @@ class KAZEFeatureRepresentation: public pcl::DefaultFeatureRepresentation <Point
 	bool extended;
 	
 	public:
-	KAZEFeatureRepresentation (bool extended=true)
+	KAZEFeatureRepresentation (bool extended=false)
 	{
 		// Define the number of dimensions.
-		if(extended){
+		if(!extended){
 			nr_dimensions_ = 64 ;
 		}
 		else{
